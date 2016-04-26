@@ -7,7 +7,7 @@ baseurl: /cuckooml
 
 permalink: /:year/:month/:day/:title/
 paginate: 10
-highlighter: pygments
+highlighter: rouge
 paginate_path: "blog/posts/:num"
 
 gems: [jekyll-paginate]
