@@ -1,0 +1,14 @@
+name: CuckooML
+url: https://honeynet.github.io/cuckooml
+description: CuckooML&#58; Automated Malware Analysis
+
+baseurl: /cuckooml
+
+
+permalink: /:year/:month/:day/:title/
+paginate: 10
+highlighter: pygments
+paginate_path: "blog/posts/:num"
+
+gems: [jekyll-paginate]
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'feed.xml']

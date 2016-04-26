@@ -1,0 +1,21 @@
+---
+layout: default
+title: CuckooML&#58; archives
+---
+
+<div id="blog-archives">
+
+	{% for post in site.posts %}
+		<article class="post">
+			{% if post.external-url %}
+				<h1>
+					<a href="{{ site.baseurl }}{{ post.external-url }}">{{ post.title }}</a> 
+					<a class="anchor" href="{{ site.baseurl }}{{ post.url }}"><i class="icon-anchor"></i></a>
+				</h1>
+			{% else %}
+				<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+			{% endif %}
+		</article>
+	{% endfor %}
+
+</div>
