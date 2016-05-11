@@ -1,0 +1,6 @@
+# malware samples
+sample
+
+# Jupiter Notebooks
+*.ipynotebook
+.ipynb_checkpoints
