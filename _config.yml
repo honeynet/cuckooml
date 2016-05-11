@@ -9,6 +9,7 @@ permalink: /:year/:month/:day/:title/
 paginate: 10
 highlighter: rouge
 paginate_path: "blog/posts/:num"
+excerpt_separator: "<!--more-->"
 
 gems: [jekyll-paginate]
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile', 'feed.xml']
