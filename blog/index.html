@@ -16,7 +16,21 @@ title: CuckooML&#58; blog
 			<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 		{% endif %}
 
-		<div class="post-content">{{ post.content }}</div>
+    <div class="post-content">{{ post.excerpt }}</div> <!---post.content-->
+
+    {% capture content_words %} 
+      {{ post.content | number_of_words }} 
+    {% endcapture %} 
+    {% capture excerpt_words %} 
+      {{ post.excerpt | number_of_words }} 
+    {% endcapture %} 
+    {% if excerpt_words != content_words %}
+      <p align="right">
+        <a href="{{ post.url }}">Read more <i class="fa fa-arrow-circle-right"></i></a>
+      </p>
+    {% endif %}
+
+    <hr><hr>
 
 	</article>
 
