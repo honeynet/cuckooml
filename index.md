@@ -1,9 +1,9 @@
 ---
 layout: default
-title: CuckooML&#58; Automated Malware Analysis
+title: CuckooML&#58; Machine Learning for Cuckoo Sandbox
 ---
 
-# CuckooML&#58; Automated Malware Analysis #
+# CuckooML&#58; Machine Learning for Cuckoo Sandbox #
 
 ## Introduction ##
 
