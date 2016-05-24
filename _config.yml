@@ -1,6 +1,6 @@
 name: CuckooML
 url: https://honeynet.github.io/cuckooml
-description: CuckooML&#58; Automated Malware Analysis
+description: CuckooML&#58; Machine Learning for Cuckoo Sandbox
 
 baseurl: /cuckooml
 
