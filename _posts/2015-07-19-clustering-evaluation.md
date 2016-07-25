@@ -8,7 +8,7 @@ categories: clustering
 This time I did clustering with *DBSCAN* and *HDBSCAN*. These are fairly simple yet effective clustering algorithms suitable for any kind of data. Additionally, I've implemented a method evaluating the results of clustering with variety of metrics: *Adjusted Mutual Information Score*, *Adjusted Random Index*, *Completeness*, *Homogeneity*, *Silhouette Coefficient*, and *V-measure*. Finally, I did loads of experiments to pick te best parameters for those.<!--more-->
 
 ## Choosing the best parameters settings ##
-A snipped to produce results of clustering for variety of parameters settings.
+A snippet to produce results of clustering for variety of parameters settings.
 {% highlight python%}
   import numpy as np
   import pandas as pd
@@ -139,8 +139,7 @@ then the following code was used to produce figures and results placed below:
 {% endhighlight %}
 
 ## Results ##
-After all kind of analysis *HDBSCAN* with `min_samples=1.0` and `min_cluster_size=6` seems to do quite well on the dataset with *full* set of features. It does not outperform the rest in **all** of the cases but provides top-of-the-ranking performance with reasonable cluster number and cluster structure.  
-Below is table with results for various dataset combination:
+After all kind of analyses with `min_samples=1.0` and `min_cluster_size=6` *HDBSCAN* seems to do quite well on the dataset with *full* set of features. It does not outperform the rest in **all** of the cases but provides top-of-the-ranking performance with reasonable cluster number and cluster structure. Below is table with results for various dataset combination:
 
  * *full* - the full set of features
  * *filtered* - only the features that are denser than 10%
