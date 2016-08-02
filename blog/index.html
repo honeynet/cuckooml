@@ -43,9 +43,9 @@ title: CuckooML&#58; blog
 
 		{% if paginator.previous_page %}
 			{% if paginator.page == 2 %}
-				<a class="prev left" href="{{ site.baseurl }}/">&larr; Newer</a>
+				<a class="prev left" href="{{ site.baseurl }}/blog">&larr; Newer</a>
 			{% else %}
-				<a class="prev left" href="{{ site.baseurl }}/page{{paginator.previous_page}}/">&larr; Newer</a>
+				<a class="prev left" href="{{ site.baseurl }}/blog/posts/{{paginator.previous_page}}/">&larr; Newer</a>
 			{% endif %}
 		{% else %}
 			<span class="nope left">&larr; Newer</span>
@@ -54,7 +54,7 @@ title: CuckooML&#58; blog
 		<span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 
 		{% if paginator.next_page %}
-			<a class="next right" href="{{ site.baseurl }}/page{{paginator.next_page}}/">Older &rarr;</a>
+			<a class="next right" href="{{ site.baseurl }}/blog/posts/{{paginator.next_page}}/">Older &rarr;</a>
 		{% else %}
 			<span class="nope right">Older &rarr;</span>
 		{% endif %}
