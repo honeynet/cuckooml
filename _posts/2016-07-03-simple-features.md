@@ -2,7 +2,8 @@
 layout: post
 title:  Simple features
 date:   2016-07-03 10:15:44
-categories: features
+category: features
+tags: [gsoc16]
 ---
 
 I spent this week playing around with generation and visualisation of *simple malware* features obtained through **signatures** JSON field. This field contains some high level binary descriptions provided by Cuckoo Sandbox analysis. This field among others contains a *tag* and its *description*. All these tags come from a finite set, hence, they can be used as binary (true/false) features for the analysis.  <!--more-->

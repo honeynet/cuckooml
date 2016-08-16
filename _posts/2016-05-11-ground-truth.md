@@ -2,7 +2,8 @@
 layout: post
 title:  "Ground truth"
 date:   2016-05-11 15:15:21
-categories: installation
+category: installation
+tags: [gsoc16]
 ---
 
 ## Extracting ground truth form virus-total ##

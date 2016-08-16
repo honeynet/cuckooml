@@ -2,7 +2,8 @@
 layout: post
 title:  "Preliminary information & background"
 date:   2016-04-26 13:02:25
-categories: background
+category: background
+tags: [gsoc16]
 ---
 
 ## Issues to consider ##

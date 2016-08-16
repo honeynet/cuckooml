@@ -2,7 +2,8 @@
 layout: post
 title:  "Binaries similarity metrics"
 date:   2016-06-26 11:27:24
-categories: features
+category: features
+tags: [gsoc16]
 ---
 Working with features extraction last week ade me think more about possible *similarity metrics* and *heuristics* in malware clustering. The two simple concepts are **feature scoping** and **feature grouping**.<!--more-->
 

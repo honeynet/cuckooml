@@ -2,7 +2,8 @@
 layout: post
 title:  Clustering misc
 date:   2016-07-29 17:22:47
-categories: clustering
+category: clustering
+tags: [gsoc16]
 ---
 
 I spent the last couple of days to implement miscellaneous functions helping with clustering. Among others: saving clustering results into JSON, label statistics per cluster, comparing a new sample to in-memory clustering and basic version of anomaly detection.<!--more-->  

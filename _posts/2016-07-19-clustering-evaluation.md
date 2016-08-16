@@ -2,7 +2,8 @@
 layout: post
 title:  Clustering evaluation
 date:   2016-07-19 19:05:56
-categories: clustering
+category: clustering
+tags: [gsoc16]
 ---
 
 This time I did clustering with *DBSCAN* and *HDBSCAN*. These are fairly simple yet effective clustering algorithms suitable for any kind of data. Additionally, I've implemented a method evaluating the results of clustering with variety of metrics: *Adjusted Mutual Information Score*, *Adjusted Random Index*, *Completeness*, *Homogeneity*, *Silhouette Coefficient*, and *V-measure*. Finally, I did loads of experiments to pick te best parameters for those.<!--more-->

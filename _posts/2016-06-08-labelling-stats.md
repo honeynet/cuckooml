@@ -2,7 +2,8 @@
 layout: post
 title:  "Labelling statistics"
 date:   2016-06-08 17:33:42
-categories: labelling
+category: labelling
+tags: [gsoc16]
 ---
 
 ## Picking the right label ##

@@ -2,7 +2,8 @@
 layout: post
 title:  "Binary feature extraction"
 date:   2016-06-19 13:45:11
-categories: features
+category: features
+tags: [gsoc16]
 ---
 In this post I will describe my fight with [Issue #5](https://github.com/honeynet/cuckooml/issues/5) aka feature extraction.<!--more-->
 

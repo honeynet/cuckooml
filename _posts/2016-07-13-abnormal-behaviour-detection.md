@@ -2,7 +2,8 @@
 layout: post
 title:  Abnormal behaviour detection
 date:   2016-07-13 13:46:53
-categories: functionality
+category: functionality
+tags: [gsoc16]
 ---
 
 I was suggested to develop a mechanism to detect binaries that behave abnormally. To this end, I used *count* features that count numerous operations performed by the binaries like number of files written, number of network connections, etc. As a method for the outlier detection I used classic *boxplots*.<!--more-->

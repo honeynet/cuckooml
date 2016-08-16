@@ -2,7 +2,8 @@
 layout: post
 title:  "Automatic malware labelling"
 date:   2016-06-06 22:58:56
-categories: labelling
+category: labelling
+tags: [gsoc16]
 ---
 
 ## Normalising variety of virus-total malware names ##
