@@ -72,3 +72,4 @@ def parse_options(options):
 def emit_options(options):
     """Emit the analysis options from a dictionary to a string."""
     return ",".join("%s=%s" % (k, v) for k, v in options.items())
+
