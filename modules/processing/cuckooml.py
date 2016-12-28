@@ -797,6 +797,13 @@ class ML(object):
 
     def detect_abnormal_behaviour(self, count_dataset=None, figures=True):
         """Detect samples that behave significantly different than others."""
+        
+        # Safety check for plotting
+        if not Config("cuckooml").cuckooml.plotting and figures:
+            print >> sys.stderr, "Warning: 'plotting' and 'figures' do not match. Plotting modules might not be imported."
+            figures = False
+
+
         if count_dataset is None:
             # Pull all count features
             count_features = self.feature_category(":count:")
@@ -1133,6 +1140,13 @@ class ML(object):
 
     def clustering_label_distribution(self, clustering, labels, plot=False):
         """Get statistics about number of ground truth labels per cluster."""
+        
+        # Safety check for plotting
+        if not Config("cuckooml").cuckooml.plotting and plot:
+            print >> sys.stderr, "Warning: 'plotting' and 'plot' do not match. Plotting modules might not be imported."
+            plot = False
+
+
         cluster_ids = set(clustering["label"].tolist())
         labels_ids = set(labels["label"].tolist())
         cluster_distribution = {}
