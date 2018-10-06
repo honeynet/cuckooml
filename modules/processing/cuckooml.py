@@ -35,7 +35,7 @@ def init_cuckooml():
 
     # Load reports for clustering
     loader = Loader()
-    loader.load_binaries(CUCKOO_ROOT + "/" + cfg.cuckooml.data_directory)
+    loader.load_binaries(os.path.join(CUCKOO_ROOT, cfg.cuckooml.data_directory))
 
     # Get features dictionaries
     simple_features_dict = loader.get_simple_features()
