@@ -35,7 +35,7 @@ def init_cuckooml():
 
     # Load reports for clustering
     loader = Loader()
-    loader.load_binaries(CUCKOO_ROOT + "/" + cfg.cuckooml.data_directory)
+    loader.load_binaries(os.path.join(CUCKOO_ROOT, cfg.cuckooml.data_directory))
 
     # Get features dictionaries
     simple_features_dict = loader.get_simple_features()
@@ -140,7 +140,7 @@ def init_cuckooml():
 
 
     if cfg.cuckooml.compare_new_samples:
-        test_location = CUCKOO_ROOT + "/" + cfg.cuckooml.test_directory
+        test_location = os.path.join(CUCKOO_ROOT, cfg.cuckooml.test_directory)
 
         new_sample = None
         if os.path.isdir(test_location):
@@ -163,8 +163,8 @@ def init_cuckooml():
 
     if cfg.cuckooml.clustering and cfg.cuckooml.save_clustering_results:
         if cfg.cuckooml.clustering_results_directory:
-            ml.save_clustering_results(loader, CUCKOO_ROOT+"/"+cfg.cuckooml.\
-                                       clustering_results_directory)
+            ml.save_clustering_results(loader, os.path.join(CUCKOO_ROOT, cfg.cuckooml.\
+                                       clustering_results_directory))
         else:
             ml.save_clustering_results(loader)
 
@@ -1076,7 +1076,7 @@ class ML(object):
                 sample.update(clustering["min_samples"], "min_samples")
                 sample.update(clustering["min_cluster_size"], \
                               "min_cluster_size")
-                sample.save_json(os.path.dirname(sample.json_path)+"/")
+                sample.save_json(os.path.join(os.path.dirname(sample.json_path), "/"))
         # TODO: handle more than one test sample
         elif isinstance(sample, Loader):
             clustering_result = pd.DataFrame()
@@ -1182,10 +1182,10 @@ class Loader(object):
 
     def load_binaries(self, directory):
         """Load all binaries' reports from given directory."""
-        self.binaries_location = directory + "/"
+        self.binaries_location = os.path.join(directory, "/")
         for f in os.listdir(directory):
             self.binaries[f] = Instance()
-            self.binaries[f].load_json(directory+"/"+f, f)
+            self.binaries[f].load_json(os.path.join(directory, f), f)
             self.binaries[f].label_sample()
             self.binaries[f].extract_features()
             self.binaries[f].extract_basic_features()
@@ -1210,8 +1210,7 @@ class Loader(object):
             save_location = self.binaries_location
             if alternative_location:
                 save_location = alternative_location
-                if save_location[-1] != "/":
-                    save_location += "/"
+
 
             # Create directory if it does not exist
             if not os.path.exists(save_location):
