@@ -1076,7 +1076,7 @@ class ML(object):
                 sample.update(clustering["min_samples"], "min_samples")
                 sample.update(clustering["min_cluster_size"], \
                               "min_cluster_size")
-                sample.save_json(os.path.dirname(sample.json_path)+"/")
+                sample.save_json(os.path.join(os.path.dirname(sample.json_path), "/"))
         # TODO: handle more than one test sample
         elif isinstance(sample, Loader):
             clustering_result = pd.DataFrame()
@@ -1182,7 +1182,7 @@ class Loader(object):
 
     def load_binaries(self, directory):
         """Load all binaries' reports from given directory."""
-        self.binaries_location = directory + "/"
+        self.binaries_location = os.path.join(directory, "/")
         for f in os.listdir(directory):
             self.binaries[f] = Instance()
             self.binaries[f].load_json(os.path.join(directory, f), f)
@@ -1210,8 +1210,7 @@ class Loader(object):
             save_location = self.binaries_location
             if alternative_location:
                 save_location = alternative_location
-                if save_location[-1] != "/":
-                    save_location += "/"
+
 
             # Create directory if it does not exist
             if not os.path.exists(save_location):
