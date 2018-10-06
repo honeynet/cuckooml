@@ -140,7 +140,7 @@ def init_cuckooml():
 
 
     if cfg.cuckooml.compare_new_samples:
-        test_location = CUCKOO_ROOT + "/" + cfg.cuckooml.test_directory
+        test_location = os.path.join(CUCKOO_ROOT, cfg.cuckooml.test_directory)
 
         new_sample = None
         if os.path.isdir(test_location):
@@ -163,8 +163,8 @@ def init_cuckooml():
 
     if cfg.cuckooml.clustering and cfg.cuckooml.save_clustering_results:
         if cfg.cuckooml.clustering_results_directory:
-            ml.save_clustering_results(loader, CUCKOO_ROOT+"/"+cfg.cuckooml.\
-                                       clustering_results_directory)
+            ml.save_clustering_results(loader, os.path.join(CUCKOO_ROOT, cfg.cuckooml.\
+                                       clustering_results_directory))
         else:
             ml.save_clustering_results(loader)
 
@@ -1185,7 +1185,7 @@ class Loader(object):
         self.binaries_location = directory + "/"
         for f in os.listdir(directory):
             self.binaries[f] = Instance()
-            self.binaries[f].load_json(directory+"/"+f, f)
+            self.binaries[f].load_json(os.path.join(directory, f), f)
             self.binaries[f].label_sample()
             self.binaries[f].extract_features()
             self.binaries[f].extract_basic_features()
